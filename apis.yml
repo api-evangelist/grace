@@ -1,7 +1,28 @@
 aid: grace
 name: Grace
-description: Grace is a company surfaced as a portfolio company of speedinvest and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Grace (Grâce) is a Paris-based insurtech that lets luxury maisons offer their
+  clients complimentary, embedded protection against theft, loss, and damage for
+  high-value goods such as watches, jewelry, and accessories. Founded in 2022 and
+  backed by Speedinvest and FinTech Collective, Grace pairs a top-tier underwriter
+  with a technology platform that handles instant coverage, fraud detection, claims
+  processing, and logistics through the Grace app, and integrates into a brand's
+  existing purchase journeys via a customizable API. The company raised a €5.9M seed
+  round in 2025 and operates across Europe and beyond. Grace publishes no public
+  developer portal or API specification; its API is a private, partner-facing
+  integration offered to luxury brands.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://framerusercontent.com/images/PhaXwIuTAl3eB9UAKF2bxCO02fM.png
 url: https://raw.githubusercontent.com/api-evangelist/grace/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +32,33 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Insurance
+- Insurtech
+- Fintech
+- Luxury
+- Embedded Insurance
+- Claims
+- France
 apis: []
+common:
+- type: DomainSecurity
+  url: security/grace-domain-security.yml
+- type: Website
+  url: https://grace.io/en/
+- type: PrivacyPolicy
+  url: https://products.privasee.io/privacy-portal/6597e943af79c00013320b0e
+- type: Login
+  url: https://app.grace.io
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

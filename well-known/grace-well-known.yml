@@ -1,0 +1,50 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of /.well-known/* on Grace hosts
+note: >-
+  Grace publishes no /.well-known/ discovery documents. The marketing site
+  (grace.io) returns 404 for every probed path. The client portal (app.grace.io)
+  is a single-page app that returns HTTP 200 with the app's HTML shell
+  (content-type text/html) for ANY path, so its 200s are catch-all responses,
+  not real discovery documents. No WellKnown/SecurityTxt pointer is wired.
+hosts:
+- host: https://grace.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://app.grace.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    valid: false
+    reason: SPA catch-all returns text/html app shell, not a security.txt
+  - path: /.well-known/openid-configuration
+    status: 200
+    valid: false
+    reason: SPA catch-all returns text/html app shell, not OIDC JSON
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    valid: false
+    reason: SPA catch-all returns text/html app shell, not RFC 8414 JSON
+  - path: /.well-known/api-catalog
+    status: 200
+    valid: false
+    reason: SPA catch-all returns text/html app shell, not an API catalog
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    valid: false
+    reason: SPA catch-all returns text/html app shell, not a plugin manifest
+  - path: /llms.txt
+    status: 200
+    valid: false
+    reason: SPA catch-all returns text/html app shell, not an llms.txt
