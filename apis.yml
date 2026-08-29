@@ -11,6 +11,17 @@ description: >-
   round in 2025 and operates across Europe and beyond. Grace publishes no public
   developer portal or API specification; its API is a private, partner-facing
   integration offered to luxury brands.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
